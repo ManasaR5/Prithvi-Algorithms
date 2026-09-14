@@ -116,6 +116,10 @@ public class BestRootForBinaryTree {
             if (graph.get(i).size() > 2) {
                 continue;
             }
+            if (rDiameterFirstEnd.distance[i] == -1
+                    || rDiameterSecondEnd.distance[i] == -1) {
+                continue;
+            }
             int heightFromNode = Math.max(rDiameterFirstEnd.distance[i], rDiameterSecondEnd.distance[i]);
             if(heightFromNode < minHeight)
             {
@@ -203,6 +207,10 @@ public class BestRootForBinaryTree {
 
         check("single node", solution.findRoot(1, new int[0][0]), 0);
         check("empty tree", solution.findRoot(0, new int[0][0]), -1);
+
+        int[][] disconnected = {{0, 1}};
+        check("unreachable nodes are not root candidates",
+                solution.findMinimumHeightRoot(3, disconnected), 0);
 
         System.out.println("all passed");
     }
