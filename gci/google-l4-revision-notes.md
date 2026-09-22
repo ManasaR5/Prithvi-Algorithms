@@ -1592,3 +1592,142 @@ Before saying the solution is complete, check:
 10. Did I reset mutable instance state between calls?
 11. Does my complexity match the structure I actually built?
 12. Did I test a missing key, duplicate input, zero, extreme integer, and unreachable case?
+
+---
+
+## 16. Top 10 problems for one final week
+
+This list optimizes for reusable pattern coverage and the mistakes recorded during revision. Treat a base problem and its listed follow-up as one practice slot.
+
+### 1. Grid reachability and safest path
+
+Files:
+
+- [GridReachability.java](2-grid-reachability/GridReachability.java)
+- [MaximumSafetyPath.java](2-grid-reachability/MaximumSafetyPath.java)
+
+Practice:
+
+- Ordinary grid BFS.
+- Multi-source BFS for danger distances.
+- Maximum-bottleneck Dijkstra with a max-heap.
+
+### 2. Teleporter shortest path
+
+File: [TeleporterShortestPath.java](33-teleporter-shortest-path/TeleporterShortestPath.java)
+
+Practice:
+
+- BFS parent reconstruction.
+- Excluding blocked nodes.
+- 0-1 BFS relaxation with a deque.
+
+### 3. Time-aware package routing
+
+File: [TimeAwarePackageRouting.java](5-time-aware-routing/TimeAwarePackageRouting.java)
+
+Practice:
+
+- Earliest-arrival state.
+- Min-heap ordering.
+- Stale-entry checks.
+- Child-to-parent path reconstruction.
+
+### 4. Sequence reconstruction
+
+File: [SequenceReconstruction.java](39-sequence-reconstruction/SequenceReconstruction.java)
+
+Practice:
+
+- Topological sorting.
+- Unique-order detection.
+- Edge deduplication.
+- Singleton and unknown-value validation.
+
+### 5. Transitive sentence similarity
+
+File: [SentenceSimilarityTwo.java](38-sentence-similarity-transitive/SentenceSimilarityTwo.java)
+
+Practice:
+
+- Union-Find.
+- Path compression.
+- Union by size.
+- Resetting state between independent calls.
+
+### 6. Longest path through one-valued tree nodes
+
+File: [LongestOnePathNodes.java](20-connected-components-binary-tree/LongestOnePathNodes.java)
+
+Practice:
+
+- Postorder tree DP.
+- Combining two downward arms.
+- Finding a turning point.
+- Reconstructing an actual tree path.
+
+### 7. Longest subsequence with constrained adjacent difference
+
+File: [LongestSubseqAdjacentDiff.java](12-longest-inc-subseq-adjacent-diff/LongestSubseqAdjacentDiff.java)
+
+Practice:
+
+- Quadratic subsequence DP.
+- Value-based `O(N)` optimization.
+- Best-ending-index maps.
+- Parent reconstruction.
+- Segment-tree range maximum as an advanced follow-up.
+
+### 8. Interval progression
+
+Folder: [15-interval-overlap](15-interval-overlap)
+
+Practice:
+
+- Pair overlap.
+- Any-pair overlap after sorting.
+- Merge and insert intervals.
+- Maximum simultaneous overlap with a min-heap.
+- Closed-endpoint equality rules.
+
+### 9. Top K from a stream
+
+File: [TopKFromStream.java](13-top-k-from-stream/TopKFromStream.java)
+
+Practice:
+
+- Size-`K` min-heap.
+- Batch frequency counting.
+- Continuous ranking with a map and TreeSet.
+- Comparator and tie-breaking rules.
+
+### 10. Recursive placeholder substitution
+
+File: [RecursivePlaceholderSubstitution.java](9-recursive-placeholder-substitution/RecursivePlaceholderSubstitution.java)
+
+Practice:
+
+- Recursive parsing.
+- Memoization.
+- Current-path cycle detection.
+- Output-sensitive complexity.
+
+### Seven-day schedule
+
+1. **Day 1:** Grid reachability and safest path.
+2. **Day 2:** Teleporters and time-aware routing.
+3. **Day 3:** Sequence reconstruction and Union-Find.
+4. **Day 4:** Longest one-path and constrained subsequence DP.
+5. **Day 5:** Interval progression and Top K.
+6. **Day 6:** Recursive placeholders, then redo the weakest problem.
+7. **Day 7:** Complete two timed 45-minute mocks without notes.
+
+For every attempt:
+
+1. State the approach.
+2. State the invariant.
+3. Explain what each data structure represents.
+4. Explain the update.
+5. Give time and space complexity.
+6. Code without reading the solution.
+7. Test one normal, one failure, and one boundary case.
